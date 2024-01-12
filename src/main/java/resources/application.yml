@@ -1,7 +1,4 @@
-spring:
-  main:
-    allow-bean-definition-overriding: true
-
-my-app:
-  message: Hello from application.yml!
-  number: 42
+myapp:
+  app:
+    name: child
+    description: child app

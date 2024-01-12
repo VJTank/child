@@ -5,13 +5,15 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class Controller {
+public class AppController {
 
-    @Autowired
-    private MyAppProperties propertyUser;
+  @Autowired
+  private AppService appService;
 
-    @GetMapping("/test")
-    public String testProperties() {
-        return propertyUser.getMessage() + ": "+ propertyUser.getNumber();
-    }
+  @GetMapping("/name")
+  public String getName() {
+    return appService.printAppProperties();
+  }
+
 }
+
